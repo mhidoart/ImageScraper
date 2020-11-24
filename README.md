@@ -6,7 +6,7 @@ this script has two classes first one gets a max amount of urls  (the variable m
 
 # my motivations :
 improve my python skills and share something that could be usefull for others :) 
-please donate here :  [www.assabbane.com]: (http://www.assabbane.com/ )
+please donate here : www.assabbane.com
 
 # how to use the script:
     1. First you shold verrify that you have all the dipendencies , and by dipendencies i mean python3 and the libraries imported in top of the script "imageScraper.py" 
@@ -29,4 +29,4 @@ some website could detect the scraper i already bypassed that using some proxies
 so if it doesn't work on your target you should be ashamed of what you are doing!!
 
 
-# if i helped you  you can always by me a coffe on : [www.assabbane.com]: (http://www.assabbane.com/ )
+# if i helped you  you can always by me a coffe on : www.assabbane.com
