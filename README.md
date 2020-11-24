@@ -6,13 +6,13 @@ this script has two classes first one gets a max amount of urls  (the variable m
 
 # my motivations :
 improve my python skills and share something that could be usefull for others :) 
-please donate here :  [www.assabbane.com]: http://www.assabbane.com/ 
+please donate here :  [www.assabbane.com]: (http://www.assabbane.com/ )
 
 # how to use the script:
     1. First you shold verrify that you have all the dipendencies , and by dipendencies i mean python3 and the libraries imported in top of the script "imageScraper.py" 
     2. how to execute the script:
     * get into the folder containing the script 
-    ```bash
+    ```
     cd ImageScraper
     ```
     * then execute the script (inside the script change the target website the variable <'site =  "https://www.example.com"'> by your own target or you can just test with the given website "https://www.florajet.com/", if you want to encrease results change the value of 'max_urls' to a higher number )
@@ -29,4 +29,4 @@ some website could detect the scraper i already bypassed that using some proxies
 so if it doesn't work on your target you should be ashamed of what you are doing!!
 
 
-# if i helped you  you can always by me a coffe on : [www.assabbane.com]: http://www.assabbane.com/ 
+# if i helped you  you can always by me a coffe on : [www.assabbane.com]: (http://www.assabbane.com/ )
