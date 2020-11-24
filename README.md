@@ -9,13 +9,18 @@ improve my python skills and share something that could be usefull for others :)
 please donate here : www.assabbane.com
 
 # how to use the script:
+
     1. First you shold verrify that you have all the dipendencies , and by dipendencies i mean python3 and the libraries imported in top of the script "imageScraper.py" 
     2. how to execute the script:
+    
     * get into the folder containing the script 
+    
     ```
     cd ImageScraper
     ```
+    
     * then execute the script (inside the script change the target website the variable <'site =  "https://www.example.com"'> by your own target or you can just test with the given website "https://www.florajet.com/", if you want to encrease results change the value of 'max_urls' to a higher number )
+    
     ```python
     python3 imageScraper.py
     ```
