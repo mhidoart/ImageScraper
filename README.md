@@ -4,11 +4,17 @@ Scraping script using python3 and urllib, it downloads all images in a given web
 # description :
 this script has two classes first one gets a max amount of urls  (the variable max_urls = 50 ) and second class searches each url and downloads every picture in that webpage.
 
+#  updates 
+
+    * archiever added (which store data in "visitedUrls.csv")
+    * the script doesn't download a pic twice thanks to the archiever module
+    
 # my motivations :
 improve my python skills and share something that could be usefull for others :) 
 please donate here : www.assabbane.com
 
 # how to use the script:
+
     1. First you shold verrify that you have all the dipendencies , and by dipendencies i mean python3 and the libraries imported in top of the script "imageScraper.py" 
     2. how to execute the script:
     * get into the folder containing the script 

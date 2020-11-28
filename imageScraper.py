@@ -6,9 +6,10 @@ import re
 import os
 import requests
 from bs4 import BeautifulSoup
+import archiever
 
 max_urls = 50
-site = "https://www.example.com"
+site = "http://www.exemple.com"
 
 
 class UrlScraper:
@@ -63,23 +64,30 @@ class ImgScraper:
         for url in urls:
             filename = re.search(r'/([\w_-]+[.](jpg|gif|jpeg|png))$', str(url))
             if not filename:
-                print("Regex didn't match with the url: {}".format(url))
+                #print("Regex didn't match with the url: {}".format(url))
                 continue
-            with open(domain+"/"+str(uuid.uuid4())+filename.group(1), 'wb') as f:
-                print("filename ::  "+domain+"/" +
-                      str(uuid.uuid4())+filename.group(1))
-                print(filename.group(1))
-                if 'http' not in url:
-                    # sometimes an image source can be relative
-                    # if it is provide the base url which also happens
-                    # to be the site variable atm.
-                    url = '{}{}'.format(site, url)
-                response = requests.get(url)
-                f.write(response.content)
+            if(url not in visitedUrls):
+                archiever.archieveUrl(url)
+                with open(domain+"/"+str(uuid.uuid4())+filename.group(1), 'wb') as f:
+                    #print("filename ::  "+domain+"/" +str(uuid.uuid4())+filename.group(1))
+                    #print(filename.group(1))
+                    if 'http' not in url:
+                        # sometimes an image source can be relative
+                        # if it is provide the base url which also happens
+                        # to be the site variable atm.
+                        url = '{}{}'.format(site, url)
+                    response = requests.get(url)
+                    f.write(response.content)
+            else:
+                print("image {} already exist in history ".format(filename.group(1)))
 
 
 scraper = UrlScraper(site, max_urls)
 imgScraper = ImgScraper()
+
+visitedUrls = archiever.loadVisitedUrls()
+
+
 
 for ll in scraper.urllist:
     imgScraper.scrape(ll)
